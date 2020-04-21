@@ -9,7 +9,8 @@ namespace LazyLoadTreeView
 
         public MainViewModel()
         {
-            Items.Add(new ExampleModel(this));
+            Items.Add(new ExampleModel(this) { HasVisibleChildren = true });
+            Items.Add(new ExampleModel(this) { HasVisibleChildren = false });
         }
 
         public ObservableCollection<AnotherExampleModel> GetItems()

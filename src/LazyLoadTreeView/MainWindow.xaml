@@ -23,7 +23,8 @@
                         <x:Type Type="local:ExampleModel" />
                     </d:Style>
 
-                    <Setter Property="LazyItemsSource" Value="{Binding DataContext.Items, RelativeSource={RelativeSource Self}}" />
+                    <Setter Property="LazyItemsSource" Value="{Binding Items}" />
+                    <Setter Property="IsExpanderVisible" Value="{Binding HasVisibleChildren}" />
                 </Style>
             </local:LazyTreeView.ItemContainerStyle>
         </local:LazyTreeView>

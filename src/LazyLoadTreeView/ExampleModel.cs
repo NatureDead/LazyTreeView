@@ -6,6 +6,7 @@ namespace LazyLoadTreeView
     public class ExampleModel
     {
         public Lazy<IEnumerable> Items { get; }
+        public bool HasVisibleChildren { get; set; }
 
         public ExampleModel(IItemsProvider itemsProvider)
         {
@@ -14,10 +15,5 @@ namespace LazyLoadTreeView
                 return itemsProvider.GetItems();
             });
         }
-    }
-
-    public class AnotherExampleModel
-    {
-        public Guid Guid { get; } = Guid.NewGuid();
     }
 }
